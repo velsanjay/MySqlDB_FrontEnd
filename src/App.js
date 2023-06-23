@@ -1,23 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import CardsDatail from './Routs/Card';
+import { Route, Routes } from 'react-router-dom';
+import NewUser from './Routs/NewUser';
+import EditUser from './Routs/EditUser';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+export const url = "https://demo-rnvn.onrender.com"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Routes>
+      <Route path='/' element={<CardsDatail/>} />
+      <Route path='/new' element={<NewUser/>} />
+      <Route path='/edit/:id' element={<EditUser/>} />
+      </Routes>
+      <ToastContainer />
     </div>
   );
 }
