@@ -7,10 +7,10 @@ function NavBar() {
     const navigate = useNavigate()
     return (
         <div className="nav">
-            <h1
+            <h3
             className='cur'
             onClick={()=>navigate('/')}
-            >Employee Detail</h1>
+            >Employee Detail</h3>
             <Button variant='text' 
             onClick={()=>navigate('/new')}
             color='primary'>New Employee</Button>
