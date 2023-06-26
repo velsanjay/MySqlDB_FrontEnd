@@ -58,6 +58,8 @@ html {
   justify-content: center;
   align-items: center;
 }
-.form{
-  width: 270px;
+@media (max-width:800px){
+  .form{
+    width: 290px;
+  }
 }
